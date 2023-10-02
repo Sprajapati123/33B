@@ -1,7 +1,7 @@
-
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-void main(){
+void main() {
   runApp(MyApp());
 }
 
@@ -11,41 +11,90 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: LoginScreen(),
+      debugShowCheckedModeBanner: false,
+      home: DemoScreen(),
     );
   }
 }
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class DemoScreen extends StatefulWidget {
+  const DemoScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<DemoScreen> createState() => _DemoScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _DemoScreenState extends State<DemoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: Column(
-        children: [
-          Container(
-            height: 200,
-            width: 200,
-            decoration: BoxDecoration(
-              color: Colors.red,
-              borderRadius: BorderRadius.circular(50)
-            ),
-            child: Center(child: Text("flutter",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold))),
-
+        appBar: AppBar(title: Text("Demo Screen"), actions: [Icon(Icons.add)]),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                height: 100,
+                width: 200,
+                decoration: BoxDecoration(
+                    color: Colors.blueGrey,
+                    borderRadius:
+                    BorderRadius.only(topRight: Radius.circular(15))),
+                child: Row(
+                  children: [
+                    Text("Flutter",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 25, color: Colors.white)),
+                    Icon(Icons.add_chart_sharp,color: Colors.white,)
+                  ],
+                ),
+              ),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+              Image.asset("assets/images/sale.png"),
+            ],
           ),
-         // <img src = "">
-          Image.network("https://api.schoolworkspro.com/uploads/contents/1669089358783_1669089254062.png")
-        ],
-      ),
-    );
+        ));
   }
 }
-
-
